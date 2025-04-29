@@ -2,13 +2,15 @@ import Navbar from './components/Navbar.jsx'
 import Hero from './components/Hero.jsx'
 import Counter from './components/counter.jsx'
 import BookCard from './components/BookCard.jsx'  
-import Notfound from '../pages/Notfound.jsx'
+import Notfound from './pages/Notfound.jsx'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Products from '../pages/Products/Products.jsx'
-import SingleProducts from '../pages/SingleProducts.jsx'
-import SignUp from '../pages/signUp/SignUp.jsx'
-import AddProduct from '../pages/Add products/AddProduct.jsx'
+import Products from './pages/Products/Products.jsx'
+import SingleProducts from './pages/SingleProducts.jsx'
+import SignUp from './pages/signUp/SignUp.jsx'
+import AddProduct from './pages/Add products/AddProduct.jsx'
 import AuthProvider from './contexts/AuthProvider.jsx'
+import Dashboard from './pages/dashboard/Dashboard.jsx'
+import ProtectedRoute from './pages/ProtectedRoute.jsx'
 
 const App = () => {
   return(
@@ -26,6 +28,11 @@ const App = () => {
       <Route path="*" element={<Notfound/>}/>
       <Route path="/sign-up" element={<SignUp/>}/>
       <Route path="/add-product" element={<AddProduct/>}/>
+
+      <Route element = {<ProtectedRoute/>} >
+        <Route path="/dashboard/*" element={<Dashboard/>}/>
+      </Route>
+
       
     </Routes>
       </AuthProvider>

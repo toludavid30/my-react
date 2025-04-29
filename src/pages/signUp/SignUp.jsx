@@ -19,10 +19,6 @@ const SignUp = () => {
                 <label htmlFor="password">Password</label>
                 <input type="password" onChange={handleInput} name='password' className="form-control form-control-md" id="password" placeholder="Enter your password" required/>
             </div>
-            {/* <div className="form-group">
-                <label htmlFor="password">Confirm Password</label>
-                <input type="password" className="form-control form-control-md" id="conPassword" placeholder="Confirm your password"/>
-            </div> */}
             <button type="submit" disabled ={isLoading} className="btn btn-primary btn-lg w-100">
                 {
                     isLoading? (

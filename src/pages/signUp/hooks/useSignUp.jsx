@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { authContext } from '../../../src/contexts/AuthProvider'
+import { authContext } from '../../../contexts/AuthProvider'
 const useSignUp = () => {  
      const {isLoading, handleSubmit, setFormData} = useContext(authContext)
 

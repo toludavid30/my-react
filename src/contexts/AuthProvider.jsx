@@ -4,7 +4,7 @@ export const authContext = createContext();
 
 
 const AuthProvider = ({children}) => {
-    const baseUrl = 'http://localhost:4006/api'
+    const baseUrl = 'https://my-backend-llzt.onrender.com/api'
     const [isLoading, setIsLoading] = useState(false)
     const [formData, setFormData] = useState({
       name:'',

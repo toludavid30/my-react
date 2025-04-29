@@ -17,10 +17,6 @@ const AddProduct = () => {
                 <label htmlFor="id">Product ID</label>
                 <input type="text" onChange={handleInput} name='id' className="form-control form-control-md" id="productID" placeholder="Enter Product ID" required/>
             </div>
-            {/* <div class="form-group">
-                <label htmlFor="password">Confirm Password</label>
-                <input type="password" class="form-control form-control-md" id="conPassword" placeholder="Confirm your password"/>
-            </div> */}
             <button type="submit" disabled={isLoading} className="btn btn-primary btn-lg w-100">
                 {
                     isLoading?(
